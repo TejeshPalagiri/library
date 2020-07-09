@@ -1,0 +1,23 @@
+<div class="container">
+  <form action="">
+    <div class="form-group">
+      <label for="bookTitle">Book Title</label>
+      <input placeholder="Book Title" type="text" [(formControl)]="bookTitle" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="bookDescription">Book Description</label>
+      <input placeholder="Book Description" type="text" [(formControl)]="bookDescription" class="form-control">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" (click)="addBook(bookTitle, bookDescription)">Add Book</button>      
+    </div>
+  </form>
+
+  <div class="alert alert-success" *ngIf="showMessage">
+    Book added Successfully
+  </div>
+
+  <div class="alert alert-danger " *ngIf="isClicked && !showMessage">
+    Required both title and description
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <!-- <add-book></add-book> -->
+  <div class="container border">
+    <form>
+      <div class="form-group">
+        <label for="bookId">Book Id</label>
+        <input placeholder="Book Id" type="text" [(formControl)]="bookId" class="form-control" readonly>
+      </div>
+      <div class="form-group">
+        <label for="bookTitle">Book Title</label>
+        <input placeholder="Book Title" type="text" [(formControl)]="bookTitle" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="bookDescription">Book Description</label>
+        <input placeholder="Book Description" type="text" [(formControl)]="bookDescription" class="form-control">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" (click)="updateBook(bookId, bookTitle, bookDescription)">Update Book</button>
+      </div>
+    </form>
+    <div class="alert alert-success" *ngIf="isClicked && showMessage">
+      Book Updated Successfully
+    </div>
+  
+    <div class="alert alert-danger " *ngIf="isClicked && !showMessage">
+      First select the book to be edited.
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <input type="text" class="form-control" placeholder="Search the title of book" (input)="search()"
+      [(ngModel)]="searchBook">
+  </div>
+  <div class="container">
+    <div class="row mt-5 ">
+      <div class="col-md-4 card border mt-2" *ngFor="let book of library_books">
+        <h3 class="card-header">{{ book.book_title }}</h3>
+        <div class="card-body">
+          <h4 class="card-title">{{ book.book_title }}</h4>
+          <p class="card-text">
+            {{book.book_description}}
+          </p>
+          <button class="btn btn-info m-2" (click)="editBook(book)">Edit</button>
+          <button class="btn btn-danger m-2" (click)="deleteBook(book._id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
