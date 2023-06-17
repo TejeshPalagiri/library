@@ -1,0 +1,1116 @@
+Last login: Fri Jun 16 14:12:49 on ttys004
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MacBook-Pro:jewel-caves-angular rapidbiz$ cd ../jewel-caves-server/
+MacBook-Pro:jewel-caves-server rapidbiz$ git branch
+  development
+* maglogs-reportsIssue
+  master
+MacBook-Pro:jewel-caves-server rapidbiz$ git git status
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+	init
+MacBook-Pro:jewel-caves-server rapidbiz$ git status
+On branch maglogs-reportsIssue
+Your branch is up to date with 'origin/maglogs-reportsIssue'.
+
+nothing to commit, working tree clean
+MacBook-Pro:jewel-caves-server rapidbiz$ code .
+MacBook-Pro:jewel-caves-server rapidbiz$ arp -a
+? (192.168.1.1) at a8:74:84:ce:40:56 on en0 ifscope [ethernet]
+? (192.168.1.5) at 80:b6:55:39:1a:7 on en0 ifscope [ethernet]
+? (192.168.1.255) at ff:ff:ff:ff:ff:ff on en0 ifscope [ethernet]
+? (224.0.0.251) at 1:0:5e:0:0:fb on en0 ifscope permanent [ethernet]
+? (239.255.255.250) at 1:0:5e:7f:ff:fa on en0 ifscope permanent [ethernet]
+MacBook-Pro:jewel-caves-server rapidbiz$ 
+
+
+
+
+
+
+
+
+
+MacBook-Pro:jewel-caves-server rapidbiz$ ssh rapidbiz@mypi.local
+rapidbiz@mypi.local's password: 
+Linux mypi 6.1.21-v7+ #1642 SMP Mon Apr  3 17:20:52 BST 2023 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sun May 14 17:19:04 2023 from 192.168.1.9
+manpath: can't set the locale; make sure $LC_* and $LANG are correct
+rapidbiz@mypi:~ $ nodee -v
+-bash: nodee: command not found
+rapidbiz@mypi:~ $ node -v
+v16.20.0
+rapidbiz@mypi:~ $ ls
+my_home_pi
+rapidbiz@mypi:~ $ cd my_home_pi/
+rapidbiz@mypi:~/my_home_pi $ ls
+app  config  node_modules  package-lock.json  package.json  pm2-prod.json  server.js  test.js
+rapidbiz@mypi:~/my_home_pi $ vi server.js 
+rapidbiz@mypi:~/my_home_pi $ ifconfig 
+eth0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether b8:27:eb:6f:65:a8  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 10  bytes 1558 (1.5 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 10  bytes 1558 (1.5 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.35  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::eb3d:8c51:a115:b117  prefixlen 64  scopeid 0x20<link>
+        ether b8:27:eb:3a:30:fd  txqueuelen 1000  (Ethernet)
+        RX packets 981  bytes 175356 (171.2 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 472  bytes 54391 (53.1 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+rapidbiz@mypi:~/my_home_pi $ pin google.com
+-bash: pin: command not found
+rapidbiz@mypi:~/my_home_pi $ pin
+pinentry         ping             ping6            pinout           
+pinentry-curses  ping4            pinky            
+rapidbiz@mypi:~/my_home_pi $ ping google.com
+PING google.com (142.250.195.238) 56(84) bytes of data.
+64 bytes from maa03s43-in-f14.1e100.net (142.250.195.238): icmp_seq=1 ttl=58 time=14.9 ms
+64 bytes from maa03s43-in-f14.1e100.net (142.250.195.238): icmp_seq=2 ttl=58 time=17.3 ms
+64 bytes from maa03s43-in-f14.1e100.net (142.250.195.238): icmp_seq=3 ttl=58 time=17.2 ms
+64 bytes from maa03s43-in-f14.1e100.net (142.250.195.238): icmp_seq=4 ttl=58 time=19.2 ms
+64 bytes from maa03s43-in-f14.1e100.net (142.250.195.238): icmp_seq=5 ttl=58 time=18.7 ms
+^C
+--- google.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+rtt min/avg/max/mdev = 14.865/17.458/19.166/1.495 ms
+rapidbiz@mypi:~/my_home_pi $ sudo apt update
+Get:1 http://archive.raspberrypi.org/debian bullseye InRelease [23.6 kB]
+Get:2 http://archive.raspberrypi.org/debian bullseye/main armhf Packages [316 kB]
+Get:3 http://raspbian.raspberrypi.org/raspbian bullseye InRelease [15.0 kB]       
+Get:4 http://raspbian.raspberrypi.org/raspbian bullseye/main armhf Packages [13.2 MB]
+Fetched 13.6 MB in 31s (433 kB/s)                                                                                     
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+rapidbiz@mypi:~/my_home_pi $ tv
+-bash: tv: command not found
+rapidbiz@mypi:~/my_home_pi $ apt list --upgradable
+Listing... Done
+base-files/stable 11.1+rpi1+deb11u7 armhf [upgradable from: 11.1+rpi1+deb11u6]
+libpam-systemd/stable 247.3-7+rpi1+deb11u2 armhf [upgradable from: 247.3-7+rpi1+deb11u1]
+libsystemd0/stable 247.3-7+rpi1+deb11u2 armhf [upgradable from: 247.3-7+rpi1+deb11u1]
+libudev1/stable 247.3-7+rpi1+deb11u2 armhf [upgradable from: 247.3-7+rpi1+deb11u1]
+libwebp6/stable 0.6.1-2.1+deb11u1 armhf [upgradable from: 0.6.1-2.1]
+libwebpdemux2/stable 0.6.1-2.1+deb11u1 armhf [upgradable from: 0.6.1-2.1]
+libwebpmux3/stable 0.6.1-2.1+deb11u1 armhf [upgradable from: 0.6.1-2.1]
+raspberrypi-sys-mods/stable 20230510~bullseye armhf [upgradable from: 20230329]
+rpi-eeprom/stable 16.1-1 armhf [upgradable from: 16.0-1]
+systemd-sysv/stable 247.3-7+rpi1+deb11u2 armhf [upgradable from: 247.3-7+rpi1+deb11u1]
+systemd-timesyncd/stable 247.3-7+rpi1+deb11u2 armhf [upgradable from: 247.3-7+rpi1+deb11u1]
+systemd/stable 247.3-7+rpi1+deb11u2 armhf [upgradable from: 247.3-7+rpi1+deb11u1]
+udev/stable 247.3-7+rpi1+deb11u2 armhf [upgradable from: 247.3-7+rpi1+deb11u1]
+rapidbiz@mypi:~/my_home_pi $ sudo apt upgrade
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  base-files libpam-systemd libsystemd0 libudev1 libwebp6 libwebpdemux2 libwebpmux3 raspberrypi-sys-mods rpi-eeprom
+  systemd systemd-sysv systemd-timesyncd udev
+13 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 9588 kB of archives.
+After this operation, 1053 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.raspberrypi.org/debian bullseye/main armhf raspberrypi-sys-mods armhf 20230510~bullseye [18.4 kB]
+Get:3 http://archive.raspberrypi.org/debian bullseye/main armhf rpi-eeprom armhf 16.1-1 [2396 kB]
+Get:2 http://raspbian.raspberrypi.org/raspbian bullseye/main armhf base-files armhf 11.1+rpi1+deb11u7 [70.4 kB]
+Get:4 http://raspbian.raspberrypi.org/raspbian bullseye/main armhf systemd-sysv armhf 247.3-7+rpi1+deb11u2 [114 kB]
+Get:5 http://raspbian.raspberrypi.org/raspbian bullseye/main armhf libpam-systemd armhf 247.3-7+rpi1+deb11u2 [261 kB]
+Get:6 http://raspbian.raspberrypi.org/raspbian bullseye/main armhf libsystemd0 armhf 247.3-7+rpi1+deb11u2 [346 kB]
+Get:7 http://raspbian.raspberrypi.org/raspbian bullseye/main armhf systemd-timesyncd armhf 247.3-7+rpi1+deb11u2 [131 kB]
+Get:8 http://raspbian.raspberrypi.org/raspbian bullseye/main armhf systemd armhf 247.3-7+rpi1+deb11u2 [4252 kB]
+Get:9 http://raspbian.raspberrypi.org/raspbian bullseye/main armhf udev armhf 247.3-7+rpi1+deb11u2 [1431 kB]
+Get:10 http://raspbian.raspberrypi.org/raspbian bullseye/main armhf libudev1 armhf 247.3-7+rpi1+deb11u2 [162 kB]      
+Get:11 http://raspbian.raspberrypi.org/raspbian bullseye/main armhf libwebp6 armhf 0.6.1-2.1+deb11u1 [225 kB]         
+Get:12 http://raspbian.raspberrypi.org/raspbian bullseye/main armhf libwebpdemux2 armhf 0.6.1-2.1+deb11u1 [86.8 kB]   
+Get:13 http://raspbian.raspberrypi.org/raspbian bullseye/main armhf libwebpmux3 armhf 0.6.1-2.1+deb11u1 [94.4 kB]     
+Fetched 9588 kB in 6s (1510 kB/s)                                                                                     
+Reading changelogs... Done
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = "UTF-8",
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_GB.UTF-8").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+(Reading database ... 44853 files and directories currently installed.)
+Preparing to unpack .../base-files_11.1+rpi1+deb11u7_armhf.deb ...
+Unpacking base-files (11.1+rpi1+deb11u7) over (11.1+rpi1+deb11u6) ...
+Setting up base-files (11.1+rpi1+deb11u7) ...
+Installing new version of config file /etc/debian_version ...
+(Reading database ... 44853 files and directories currently installed.)
+Preparing to unpack .../systemd-sysv_247.3-7+rpi1+deb11u2_armhf.deb ...
+Unpacking systemd-sysv (247.3-7+rpi1+deb11u2) over (247.3-7+rpi1+deb11u1) ...
+Preparing to unpack .../libpam-systemd_247.3-7+rpi1+deb11u2_armhf.deb ...
+Unpacking libpam-systemd:armhf (247.3-7+rpi1+deb11u2) over (247.3-7+rpi1+deb11u1) ...
+Preparing to unpack .../libsystemd0_247.3-7+rpi1+deb11u2_armhf.deb ...
+Unpacking libsystemd0:armhf (247.3-7+rpi1+deb11u2) over (247.3-7+rpi1+deb11u1) ...
+Setting up libsystemd0:armhf (247.3-7+rpi1+deb11u2) ...
+(Reading database ... 44853 files and directories currently installed.)
+Preparing to unpack .../systemd-timesyncd_247.3-7+rpi1+deb11u2_armhf.deb ...
+Unpacking systemd-timesyncd (247.3-7+rpi1+deb11u2) over (247.3-7+rpi1+deb11u1) ...
+Preparing to unpack .../systemd_247.3-7+rpi1+deb11u2_armhf.deb ...
+Unpacking systemd (247.3-7+rpi1+deb11u2) over (247.3-7+rpi1+deb11u1) ...
+Preparing to unpack .../udev_247.3-7+rpi1+deb11u2_armhf.deb ...
+Unpacking udev (247.3-7+rpi1+deb11u2) over (247.3-7+rpi1+deb11u1) ...
+Preparing to unpack .../libudev1_247.3-7+rpi1+deb11u2_armhf.deb ...
+Unpacking libudev1:armhf (247.3-7+rpi1+deb11u2) over (247.3-7+rpi1+deb11u1) ...
+Setting up libudev1:armhf (247.3-7+rpi1+deb11u2) ...
+(Reading database ... 44853 files and directories currently installed.)
+Preparing to unpack .../libwebp6_0.6.1-2.1+deb11u1_armhf.deb ...
+Unpacking libwebp6:armhf (0.6.1-2.1+deb11u1) over (0.6.1-2.1) ...
+Preparing to unpack .../libwebpdemux2_0.6.1-2.1+deb11u1_armhf.deb ...
+Unpacking libwebpdemux2:armhf (0.6.1-2.1+deb11u1) over (0.6.1-2.1) ...
+Preparing to unpack .../libwebpmux3_0.6.1-2.1+deb11u1_armhf.deb ...
+Unpacking libwebpmux3:armhf (0.6.1-2.1+deb11u1) over (0.6.1-2.1) ...
+Preparing to unpack .../raspberrypi-sys-mods_20230510~bullseye_armhf.deb ...
+Unpacking raspberrypi-sys-mods (20230510~bullseye) over (20230329) ...
+Preparing to unpack .../rpi-eeprom_16.1-1_armhf.deb ...
+Unpacking rpi-eeprom (16.1-1) over (16.0-1) ...
+Setting up systemd (247.3-7+rpi1+deb11u2) ...
+Setting up raspberrypi-sys-mods (20230510~bullseye) ...
+Setting up systemd-timesyncd (247.3-7+rpi1+deb11u2) ...
+Setting up udev (247.3-7+rpi1+deb11u2) ...
+Setting up libwebp6:armhf (0.6.1-2.1+deb11u1) ...
+Setting up rpi-eeprom (16.1-1) ...
+Setting up libwebpmux3:armhf (0.6.1-2.1+deb11u1) ...
+Setting up systemd-sysv (247.3-7+rpi1+deb11u2) ...
+Setting up libwebpdemux2:armhf (0.6.1-2.1+deb11u1) ...
+Setting up libpam-systemd:armhf (247.3-7+rpi1+deb11u2) ...
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Processing triggers for initramfs-tools (0.140) ...
+Processing triggers for libc-bin (2.31-13+rpt2+rpi1+deb11u5) ...
+Processing triggers for man-db (2.9.4-2) ...
+Processing triggers for dbus (1.12.24-0+deb11u1) ...
+Processing triggers for install-info (6.7.0.dfsg.2-6) ...
+rapidbiz@mypi:~/my_home_pi $ sudo apt install openvpn
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  easy-rsa libccid liblzo2-2 libpkcs11-helper1 opensc opensc-pkcs11 pcscd
+Suggested packages:
+  pcmciautils openvpn-systemd-resolved
+The following NEW packages will be installed:
+  easy-rsa libccid liblzo2-2 libpkcs11-helper1 opensc opensc-pkcs11 openvpn pcscd
+0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2183 kB of archives.
+After this operation, 6491 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://raspbian.mirror.net.in/raspbian/raspbian bullseye/main armhf libccid armhf 1.4.34-1 [330 kB]
+Get:2 http://raspbian.mirror.net.in/raspbian/raspbian bullseye/main armhf pcscd armhf 1.9.1-1 [87.6 kB]
+Get:3 http://raspbian.mirror.net.in/raspbian/raspbian bullseye/main armhf easy-rsa all 3.0.8-1 [45.2 kB]
+Get:4 http://raspbian.mirror.net.in/raspbian/raspbian bullseye/main armhf liblzo2-2 armhf 2.10-2 [50.2 kB]
+Get:5 http://raspbian.mirror.net.in/raspbian/raspbian bullseye/main armhf libpkcs11-helper1 armhf 1.27-1 [42.8 kB]
+Get:6 http://raspbian.mirror.net.in/raspbian/raspbian bullseye/main armhf opensc-pkcs11 armhf 0.21.0-1 [772 kB]
+Get:7 http://raspbian.mirror.net.in/raspbian/raspbian bullseye/main armhf opensc armhf 0.21.0-1 [326 kB]
+Get:8 http://raspbian.mirror.net.in/raspbian/raspbian bullseye/main armhf openvpn armhf 2.5.1-3 [529 kB]
+Fetched 2183 kB in 5s (435 kB/s) 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = "UTF-8",
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_GB.UTF-8").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Preconfiguring packages ...
+Selecting previously unselected package libccid.
+(Reading database ... 44855 files and directories currently installed.)
+Preparing to unpack .../0-libccid_1.4.34-1_armhf.deb ...
+Unpacking libccid (1.4.34-1) ...
+Selecting previously unselected package pcscd.
+Preparing to unpack .../1-pcscd_1.9.1-1_armhf.deb ...
+Unpacking pcscd (1.9.1-1) ...
+Selecting previously unselected package easy-rsa.
+Preparing to unpack .../2-easy-rsa_3.0.8-1_all.deb ...
+Unpacking easy-rsa (3.0.8-1) ...
+Selecting previously unselected package liblzo2-2:armhf.
+Preparing to unpack .../3-liblzo2-2_2.10-2_armhf.deb ...
+Unpacking liblzo2-2:armhf (2.10-2) ...
+Selecting previously unselected package libpkcs11-helper1:armhf.
+Preparing to unpack .../4-libpkcs11-helper1_1.27-1_armhf.deb ...
+Unpacking libpkcs11-helper1:armhf (1.27-1) ...
+Selecting previously unselected package opensc-pkcs11:armhf.
+Preparing to unpack .../5-opensc-pkcs11_0.21.0-1_armhf.deb ...
+Unpacking opensc-pkcs11:armhf (0.21.0-1) ...
+Selecting previously unselected package opensc.
+Preparing to unpack .../6-opensc_0.21.0-1_armhf.deb ...
+Unpacking opensc (0.21.0-1) ...
+Selecting previously unselected package openvpn.
+Preparing to unpack .../7-openvpn_2.5.1-3_armhf.deb ...
+Unpacking openvpn (2.5.1-3) ...
+Setting up libccid (1.4.34-1) ...
+Setting up pcscd (1.9.1-1) ...
+Created symlink /etc/systemd/system/sockets.target.wants/pcscd.socket → /lib/systemd/system/pcscd.socket.
+pcscd.service is a disabled or a static unit, not starting it.
+Setting up liblzo2-2:armhf (2.10-2) ...
+Setting up libpkcs11-helper1:armhf (1.27-1) ...
+Setting up opensc-pkcs11:armhf (0.21.0-1) ...
+Setting up easy-rsa (3.0.8-1) ...
+Setting up openvpn (2.5.1-3) ...
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Created symlink /etc/systemd/system/multi-user.target.wants/openvpn.service → /lib/systemd/system/openvpn.service.
+Setting up opensc (0.21.0-1) ...
+Processing triggers for man-db (2.9.4-2) ...
+Processing triggers for mailcap (3.69) ...
+Processing triggers for libc-bin (2.31-13+rpt2+rpi1+deb11u5) ...
+rapidbiz@mypi:~/my_home_pi $ cd /usr/share/easy-rsa
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo ./easyrsa init-pki
+
+init-pki complete; you may now create a CA or requests.
+Your newly created PKI dir is: /usr/share/easy-rsa/pki
+
+
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo ./easyrsa build-ca
+Using SSL: openssl OpenSSL 1.1.1n  15 Mar 2022
+
+Enter New CA Key Passphrase: 
+Re-Enter New CA Key Passphrase: 
+Generating RSA private key, 2048 bit long modulus (2 primes)
+.......................+++++
+.......+++++
+e is 65537 (0x010001)
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Common Name (eg: your user, host, or server name) [Easy-RSA CA]:my_pi
+
+CA creation complete and you may now import and sign cert requests.
+Your new CA certificate file for publishing is at:
+/usr/share/easy-rsa/pki/ca.crt
+
+
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo ./easyrsa gen-req server nopass
+Using SSL: openssl OpenSSL 1.1.1n  15 Mar 2022
+Generating a RSA private key
+..................+++++
+........+++++
+writing new private key to '/usr/share/easy-rsa/pki/easy-rsa-3421.XkuHiy/tmp.SHA7Rt'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Common Name (eg: your user, host, or server name) [server]:my_pi
+
+Keypair and certificate request completed. Your files are:
+req: /usr/share/easy-rsa/pki/reqs/server.req
+key: /usr/share/easy-rsa/pki/private/server.key
+
+
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo ./easyrsa sign-req server server
+Using SSL: openssl OpenSSL 1.1.1n  15 Mar 2022
+
+
+You are about to sign the following certificate.
+Please check over the details shown below for accuracy. Note that this request
+has not been cryptographically verified. Please be sure it came from a trusted
+source or that you have verified the request checksum with the sender.
+
+Request subject, to be signed as a server certificate for 825 days:
+
+subject=
+    commonName                = my_pi
+
+
+Type the word 'yes' to continue, or any other input to abort.
+  Confirm request details: yes
+Using configuration from /usr/share/easy-rsa/pki/easy-rsa-3443.qHD67Y/tmp.3Ku43B
+Enter pass phrase for /usr/share/easy-rsa/pki/private/ca.key:
+Check that the request matches the signature
+Signature ok
+The Subject's Distinguished Name is as follows
+commonName            :ASN.1 12:'my_pi'
+Certificate is to be certified until Sep 19 11:13:39 2025 GMT (825 days)
+
+Write out database with 1 new entries
+Data Base Updated
+
+Certificate created at: /usr/share/easy-rsa/pki/issued/server.crt
+
+
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo nano /etc/openvpn/server.conf
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo nano /etc/sysctl.conf
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo sysctl -p
+net.ipv4.ip_forward = 1
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+sudo iptables-save | sudo tee /etc/iptables.sav
+# Generated by iptables-save v1.8.7 on Sat Jun 17 12:15:13 2023
+*nat
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+-A POSTROUTING -o eth0 -j MASQUERADE
+COMMIT
+# Completed on Sat Jun 17 12:15:13 2023
+rapidbiz@mypi:/usr/share/easy-rsa $ 
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo systemctl enable openvpn@server
+Created symlink /etc/systemd/system/multi-user.target.wants/openvpn@server.service → /lib/systemd/system/openvpn@.service.
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo systemctl start openvpn@server
+Job for openvpn@server.service failed because the control process exited with error code.
+See "systemctl status openvpn@server.service" and "journalctl -xe" for details.
+rapidbiz@mypi:/usr/share/easy-rsa $ systemctl status openvpn@server.service
+● openvpn@server.service - OpenVPN connection to server
+     Loaded: loaded (/lib/systemd/system/openvpn@.service; enabled; vendor preset: enabled)
+     Active: activating (auto-restart) (Result: exit-code) since Sat 2023-06-17 12:16:02 BST; 3s ago
+       Docs: man:openvpn(8)
+             https://community.openvpn.net/openvpn/wiki/Openvpn24ManPage
+             https://community.openvpn.net/openvpn/wiki/HOWTO
+    Process: 3578 ExecStart=/usr/sbin/openvpn --daemon ovpn-server --status /run/openvpn/server.status 10 --cd /etc/op>
+   Main PID: 3578 (code=exited, status=1/FAILURE)
+        CPU: 74ms
+
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo systemctl start openvpn@server
+
+Job for openvpn@server.service failed because the control process exited with error code.
+See "systemctl status openvpn@server.service" and "journalctl -xe" for details.
+rapidbiz@mypi:/usr/share/easy-rsa $ 
+rapidbiz@mypi:/usr/share/easy-rsa $ systemctl status openvpn@server.service
+● openvpn@server.service - OpenVPN connection to server
+     Loaded: loaded (/lib/systemd/system/openvpn@.service; enabled; vendor preset: enabled)
+     Active: activating (auto-restart) (Result: exit-code) since Sat 2023-06-17 12:16:49 BST; 1s ago
+       Docs: man:openvpn(8)
+             https://community.openvpn.net/openvpn/wiki/Openvpn24ManPage
+             https://community.openvpn.net/openvpn/wiki/HOWTO
+    Process: 3612 ExecStart=/usr/sbin/openvpn --daemon ovpn-server --status /run/openvpn/server.status 10 --cd /etc/op>
+   Main PID: 3612 (code=exited, status=1/FAILURE)
+        CPU: 85ms
+
+rapidbiz@mypi:/usr/share/easy-rsa $ journalctl -xe
+░░ 
+░░ A start job for unit openvpn@server.service has begun execution.
+░░ 
+░░ The job identifier is 2558.
+Jun 17 12:17:05 mypi ovpn-server[3632]: WARNING: Compression for receiving enabled. Compression has been used in the p>
+Jun 17 12:17:05 mypi ovpn-server[3632]: DEPRECATED OPTION: --cipher set to 'AES-256-CBC' but missing in --data-ciphers>
+Jun 17 12:17:05 mypi ovpn-server[3632]: Options error: --ca fails with '/etc/openvpn/easy-rsa/pki/ca.crt': No such fil>
+Jun 17 12:17:05 mypi ovpn-server[3632]: Options error: --cert fails with '/etc/openvpn/easy-rsa/pki/issued/server.crt'>
+Jun 17 12:17:05 mypi ovpn-server[3632]: WARNING: cannot stat file '/etc/openvpn/easy-rsa/pki/private/server.key': No s>
+Jun 17 12:17:05 mypi ovpn-server[3632]: Options error: --key fails with '/etc/openvpn/easy-rsa/pki/private/server.key'>
+Jun 17 12:17:05 mypi ovpn-server[3632]: Options error: Please correct these errors.
+Jun 17 12:17:05 mypi ovpn-server[3632]: Use --help for more information.
+Jun 17 12:17:05 mypi systemd[1]: openvpn@server.service: Main process exited, code=exited, status=1/FAILURE
+░░ Subject: Unit process exited
+░░ Defined-By: systemd
+░░ Support: https://www.debian.org/support
+░░ 
+░░ An ExecStart= process belonging to unit openvpn@server.service has exited.
+░░ 
+░░ The process' exit code is 'exited' and its exit status is 1.
+Jun 17 12:17:05 mypi systemd[1]: openvpn@server.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://www.debian.org/support
+░░ 
+░░ The unit openvpn@server.service has entered the 'failed' state with result 'exit-code'.
+Jun 17 12:17:05 mypi systemd[1]: Failed to start OpenVPN connection to server.
+░░ Subject: A start job for unit openvpn@server.service has failed
+░░ Defined-By: systemd
+░░ Support: https://www.debian.org/support
+░░ 
+░░ A start job for unit openvpn@server.service has finished with a failure.
+░░ 
+░░ The job identifier is 2558 and the job result is failed.
+
+rapidbiz@mypi:/usr/share/easy-rsa $ ^C
+rapidbiz@mypi:/usr/share/easy-rsa $ ^C
+rapidbiz@mypi:/usr/share/easy-rsa $ 
+rapidbiz@mypi:/usr/share/easy-rsa $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo nano /etc/openvpn/server.conf
+rapidbiz@mypi:/usr/share/easy-rsa $ cd /etc/op
+opensc/  openvpn/ opt/     
+rapidbiz@mypi:/usr/share/easy-rsa $ cd /etc/op
+opensc/  openvpn/ opt/     
+rapidbiz@mypi:/usr/share/easy-rsa $ cd /etc/openvpn/
+rapidbiz@mypi:/etc/openvpn $ ls
+client  server  server.conf  update-resolv-conf
+rapidbiz@mypi:/etc/openvpn $ ccd /usr/share/easy-rsa/
+-bash: ccd: command not found
+rapidbiz@mypi:/etc/openvpn $ cd /usr/share/easy-rsa/
+rapidbiz@mypi:/usr/share/easy-rsa $ ls
+easyrsa  openssl-easyrsa.cnf  pki  vars.example  x509-types
+rapidbiz@mypi:/usr/share/easy-rsa $ cd pki/
+-bash: cd: pki/: Permission denied
+rapidbiz@mypi:/usr/share/easy-rsa $ ls
+easyrsa  openssl-easyrsa.cnf  pki  vars.example  x509-types
+rapidbiz@mypi:/usr/share/easy-rsa $ ls -l
+total 104
+-rwxr-xr-x 1 root root 76946 Sep  9  2020 easyrsa
+-rw-r--r-- 1 root root  4616 Sep  9  2020 openssl-easyrsa.cnf
+drwx------ 8 root root  4096 Jun 17 12:13 pki
+-rw-r--r-- 1 root root  8925 Sep  9  2020 vars.example
+drwxr-xr-x 2 root root  4096 Jun 17 12:10 x509-types
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo cd pki/
+sudo: cd: command not found
+rapidbiz@mypi:/usr/share/easy-rsa $ cd pki/
+-bash: cd: pki/: Permission denied
+rapidbiz@mypi:/usr/share/easy-rsa $ ls
+easyrsa  openssl-easyrsa.cnf  pki  vars.example  x509-types
+rapidbiz@mypi:/usr/share/easy-rsa $ vi vars.example 
+^[OBrapidbiz@mypi:/usr/share/easy-rsa $ mo
+modeline2fb       more              mount.fuse        mount.nfs4        mountpoint        
+modinfo           mount             mount.lowntfs-3g  mount.ntfs        mount.smb3        
+modprobe          mount.cifs        mount.nfs         mount.ntfs-3g     mountstats        
+rapidbiz@mypi:/usr/share/easy-rsa $ mo
+modeline2fb       more              mount.fuse        mount.nfs4        mountpoint        
+modinfo           mount             mount.lowntfs-3g  mount.ntfs        mount.smb3        
+modprobe          mount.cifs        mount.nfs         mount.ntfs-3g     mountstats        
+rapidbiz@mypi:/usr/share/easy-rsa $ 
+rapidbiz@mypi:/usr/share/easy-rsa $ htop
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo systemctl start openvpn@server.service
+
+Job for openvpn@server.service failed because the control process exited with error code.
+See "systemctl status openvpn@server.service" and "journalctl -xe" for details.
+rapidbiz@mypi:/usr/share/easy-rsa $ 
+rapidbiz@mypi:/usr/share/easy-rsa $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo systemctl start openvpn@server.service
+Job for openvpn@server.service failed because the control process exited with error code.
+See "systemctl status openvpn@server.service" and "journalctl -xe" for details.
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo nano /etc/openvpn/server.conf
+rapidbiz@mypi:/usr/share/easy-rsa $ cd /etc/openvpn/
+rapidbiz@mypi:/etc/openvpn $ ls
+client  server  server.conf  update-resolv-conf
+rapidbiz@mypi:/etc/openvpn $ cd server/
+rapidbiz@mypi:/etc/openvpn/server $ ls
+rapidbiz@mypi:/etc/openvpn/server $ ls
+rapidbiz@mypi:/etc/openvpn/server $ cd ../
+rapidbiz@mypi:/etc/openvpn $ ls
+client  server  server.conf  update-resolv-conf
+rapidbiz@mypi:/etc/openvpn $ cd /usr/share/easy-rsa/
+rapidbiz@mypi:/usr/share/easy-rsa $ ls
+easyrsa  openssl-easyrsa.cnf  pki  vars.example  x509-types
+rapidbiz@mypi:/usr/share/easy-rsa $ cp pki /etc/openvpn/
+cp: -r not specified; omitting directory 'pki'
+rapidbiz@mypi:/usr/share/easy-rsa $ cp -r pki /etc/openvpn/
+cp: cannot create directory '/etc/openvpn/pki': Permission denied
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo cp -r pki /etc/openvpn/
+rapidbiz@mypi:/usr/share/easy-rsa $ cd /etc/openvpn/
+rapidbiz@mypi:/etc/openvpn $ cd pki/
+-bash: cd: pki/: Permission denied
+rapidbiz@mypi:/etc/openvpn $ ls
+client  pki  server  server.conf  update-resolv-conf
+rapidbiz@mypi:/etc/openvpn $ sudo sysctl -p
+net.ipv4.ip_forward = 1
+rapidbiz@mypi:/etc/openvpn $ sudo sysctl -p
+net.ipv4.ip_forward = 1
+rapidbiz@mypi:/etc/openvpn $ sudo systemctl start openvpn@server.service
+Job for openvpn@server.service failed because the control process exited with error code.
+See "systemctl status openvpn@server.service" and "journalctl -xe" for details.
+rapidbiz@mypi:/etc/openvpn $ 
+
+rapidbiz@mypi:/etc/openvpn $ sudo systemctl enable openvpn@server
+
+rapidbiz@mypi:/etc/openvpn $ 
+rapidbiz@mypi:/etc/openvpn $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rapidbiz@mypi:/etc/openvpn $ sudo systemctl start openvpn@server.service
+Job for openvpn@server.service failed because the control process exited with error code.
+See "systemctl status openvpn@server.service" and "journalctl -xe" for details.
+rapidbiz@mypi:/etc/openvpn $ systemctl status openvpn@server.service
+● openvpn@server.service - OpenVPN connection to server
+     Loaded: loaded (/lib/systemd/system/openvpn@.service; enabled; vendor preset: enabled)
+     Active: activating (auto-restart) (Result: exit-code) since Sat 2023-06-17 12:28:53 BST; 1s ago
+       Docs: man:openvpn(8)
+             https://community.openvpn.net/openvpn/wiki/Openvpn24ManPage
+             https://community.openvpn.net/openvpn/wiki/HOWTO
+    Process: 4217 ExecStart=/usr/sbin/openvpn --daemon ovpn-server --status /run/openvpn/server.status 10 --cd /etc/op>
+   Main PID: 4217 (code=exited, status=1/FAILURE)
+        CPU: 88ms
+
+rapidbiz@mypi:/etc/openvpn $ journalctl -xe
+░░ 
+░░ A start job for unit openvpn@server.service has begun execution.
+░░ 
+░░ The job identifier is 12498.
+Jun 17 12:29:09 mypi ovpn-server[4229]: WARNING: Compression for receiving enabled. Compression has been used in the p>
+Jun 17 12:29:09 mypi ovpn-server[4229]: DEPRECATED OPTION: --cipher set to 'AES-256-CBC' but missing in --data-ciphers>
+Jun 17 12:29:09 mypi ovpn-server[4229]: Options error: --ca fails with '/etc/openvpn/easy-rsa/pki/ca.crt': No such fil>
+Jun 17 12:29:09 mypi ovpn-server[4229]: Options error: --cert fails with '/etc/openvpn/easy-rsa/pki/issued/server.crt'>
+Jun 17 12:29:09 mypi ovpn-server[4229]: WARNING: cannot stat file '/etc/openvpn/easy-rsa/pki/private/server.key': No s>
+Jun 17 12:29:09 mypi ovpn-server[4229]: Options error: --key fails with '/etc/openvpn/easy-rsa/pki/private/server.key'>
+Jun 17 12:29:09 mypi ovpn-server[4229]: Options error: Please correct these errors.
+Jun 17 12:29:09 mypi systemd[1]: openvpn@server.service: Main process exited, code=exited, status=1/FAILURE
+░░ Subject: Unit process exited
+░░ Defined-By: systemd
+░░ Support: https://www.debian.org/support
+░░ 
+░░ An ExecStart= process belonging to unit openvpn@server.service has exited.
+░░ 
+░░ The process' exit code is 'exited' and its exit status is 1.
+Jun 17 12:29:09 mypi ovpn-server[4229]: Use --help for more information.
+Jun 17 12:29:09 mypi systemd[1]: openvpn@server.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://www.debian.org/support
+░░ 
+░░ The unit openvpn@server.service has entered the 'failed' state with result 'exit-code'.
+Jun 17 12:29:09 mypi systemd[1]: Failed to start OpenVPN connection to server.
+░░ Subject: A start job for unit openvpn@server.service has failed
+░░ Defined-By: systemd
+░░ Support: https://www.debian.org/support
+░░ 
+░░ A start job for unit openvpn@server.service has finished with a failure.
+░░ 
+░░ The job identifier is 12498 and the job result is failed.
+
+rapidbiz@mypi:/etc/openvpn $ la
+-bash: la: command not found
+rapidbiz@mypi:/etc/openvpn $ ls
+client  pki  server  server.conf  update-resolv-conf
+rapidbiz@mypi:/etc/openvpn $ sudo cd pki/
+sudo: cd: command not found
+rapidbiz@mypi:/etc/openvpn $ sudo su
+root@mypi:/etc/openvpn# ls
+client	pki  server  server.conf  update-resolv-conf
+root@mypi:/etc/openvpn# cd pki/
+root@mypi:/etc/openvpn/pki# ls
+ca.crt		 index.txt.attr      issued		  renewed  safessl-easyrsa.cnf
+certs_by_serial  index.txt.attr.old  openssl-easyrsa.cnf  reqs	   serial
+index.txt	 index.txt.old	     private		  revoked  serial.old
+root@mypi:/etc/openvpn/pki# cd serial
+serial      serial.old  
+root@mypi:/etc/openvpn/pki# vi ca.crt 
+root@mypi:/etc/openvpn/pki# l
+root@mypi:/etc/openvpn/pki# ls
+ca.crt		 index.txt.attr      issued		  renewed  safessl-easyrsa.cnf
+certs_by_serial  index.txt.attr.old  openssl-easyrsa.cnf  reqs	   serial
+index.txt	 index.txt.old	     private		  revoked  serial.old
+root@mypi:/etc/openvpn/pki# cd private/
+root@mypi:/etc/openvpn/pki/private# ls
+ca.key	server.key
+root@mypi:/etc/openvpn/pki/private# cd ../../
+root@mypi:/etc/openvpn# ls
+client	pki  server  server.conf  update-resolv-conf
+root@mypi:/etc/openvpn# mkdir easy-rsa
+root@mypi:/etc/openvpn# mv -r pki easy-rsa
+mv: invalid option -- 'r'
+Try 'mv --help' for more information.
+root@mypi:/etc/openvpn# mv pki easy-rsa
+root@mypi:/etc/openvpn# ls
+client	easy-rsa  ipp.txt  server  server.conf	update-resolv-conf
+root@mypi:/etc/openvpn# cd easy-rsa/pki/
+ca.crt               index.txt.attr       issued/              renewed/             safessl-easyrsa.cnf
+certs_by_serial/     index.txt.attr.old   openssl-easyrsa.cnf  reqs/                serial
+index.txt            index.txt.old        private/             revoked/             serial.old
+root@mypi:/etc/openvpn# cd easy-rsa/pki/
+root@mypi:/etc/openvpn/easy-rsa/pki# 
+
+
+
+
+
+
+
+
+
+
+
+
+root@mypi:/etc/openvpn/easy-rsa/pki# sudo systemctl start openvpn@server.service
+root@mypi:/etc/openvpn/easy-rsa/pki# service openvpn@server
+openvpn@server: unrecognized service
+root@mypi:/etc/openvpn/easy-rsa/pki# service openvpn@server.service status
+● openvpn@server.service.service - OpenVPN connection to server.service
+     Loaded: loaded (/lib/systemd/system/openvpn@.service; disabled; vendor preset: enabled)
+     Active: inactive (dead)
+       Docs: man:openvpn(8)
+             https://community.openvpn.net/openvpn/wiki/Openvpn24ManPage
+             https://community.openvpn.net/openvpn/wiki/HOWTO
+root@mypi:/etc/openvpn/easy-rsa/pki# sudo ./easyrsa gen-req myphone nop
+sudo: ./easyrsa: command not found
+root@mypi:/etc/openvpn/easy-rsa/pki# cd
+root@mypi:~# exit
+exit
+(failed reverse-i-search)`usr/': curl -o- https://raw.github^Cercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+rapidbiz@mypi:/etc/openvpn $ cd /usr/share/
+rapidbiz@mypi:/usr/share $ ls
+ModemManager     console-setup  gcc               keyutils            openvpn                  readline
+X11              consolefonts   gdb               libc-bin            p11-kit                  rsync
+aclocal          consoletrans   gettext           libcamera           pam                      runit
+adduser          dbus-1         git-core          libdrm              pam-configs              sensible-utils
+alsa             debconf        gitweb            lintian             perl                     sounds
+applications     debianutils    glib-2.0          locale              perl5                    source-highlight
+apport           dhcpcd         gnupg             luajit-2.1.0-beta3  pixmaps                  systemd
+apt-listchanges  dict           groff             man                 pkg-config-crosswrapper  tabset
+avahi            distro-info    gst-plugins-base  man-db              pkg-config-dpkghook      tasksel
+base-files       dns            hal               maven-repo          pkgconfig                terminfo
+base-passwd      dnsmasq-base   i18n              menu                polkit-1                 ucf
+bash-completion  doc            icons             metainfo            ppp                      usb_modeswitch
+binfmts          doc-base       info              misc                publicsuffix             userconf-pi
+bug              dpkg           initramfs-tools   nano                pyshared                 vim
+build-essential  easy-rsa       iptables          nfs-common          python-apt               xml
+ca-certificates  file           iso-codes         numpy3              python3                  zoneinfo
+cmake            fontconfig     java              opensc              raspi-config             zsh
+common-licenses  fonts          keyrings          openssh             raspi-utils
+rapidbiz@mypi:/usr/share $ cd easy-rsa/
+rapidbiz@mypi:/usr/share/easy-rsa $ 
+rapidbiz@mypi:/usr/share/easy-rsa $ ./easyrsa gen-req client1 nop
+mktemp: failed to create directory via template '/usr/share/easy-rsa/pki/easy-rsa-4422.XXXXXX': Permission denied
+cp: failed to access '/usr/share/easy-rsa/pki/openssl-easyrsa.cnf': Permission denied
+
+Easy-RSA error:
+
+EASYRSA_TEMP_DIR_session not initialized!
+
+Easy-RSA error:
+
+Failed to create temporary file
+rapidbiz@mypi:/usr/share/easy-rsa $ sudo ./easyrsa gen-req client1 nop
+
+Ignoring unknown command option: 'nop'
+Using SSL: openssl OpenSSL 1.1.1n  15 Mar 2022
+Generating a RSA private key
+..........+++++
+.......................................................................+++++
+writing new private key to '/usr/share/easy-rsa/pki/easy-rsa-4429.TmgzLZ/tmp.gOPPy3'
+Enter PEM pass phrase:
+Verifying - Enter PEM pass phrase:
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Common Name (eg: your user, host, or server name) [client1]:my_phone
+
+Keypair and certificate request completed. Your files are:
+req: /usr/share/easy-rsa/pki/reqs/client1.req
+key: /usr/share/easy-rsa/pki/private/client1.key
+
+
+rapidbiz@mypi:/usr/share/easy-rsa $ cd pki/
+-bash: cd: pki/: Permission denied
+rapidbiz@mypi:/usr/share/easy-rsa $ cd /etc/openvpn/
+client/   easy-rsa/ server/   
+rapidbiz@mypi:/usr/share/easy-rsa $ cd ../
+rapidbiz@mypi:/usr/share $ sudo cp -r easy-rsa /etc/openvpn/
+client/             ipp.txt             server.conf         
+easy-rsa/           server/             update-resolv-conf  
+rapidbiz@mypi:/usr/share $ sudo cp -r easy-rsa /etc/openvpn
+rapidbiz@mypi:/usr/share $ sudo su
+root@mypi:/usr/share# cd /etc/openvpn/easy-rsa/pki/
+root@mypi:/etc/openvpn/easy-rsa/pki# ls
+ca.crt		 index.txt.attr      issued		  renewed  safessl-easyrsa.cnf
+certs_by_serial  index.txt.attr.old  openssl-easyrsa.cnf  reqs	   serial
+index.txt	 index.txt.old	     private		  revoked  serial.old
+root@mypi:/etc/openvpn/easy-rsa/pki# cd private/
+root@mypi:/etc/openvpn/easy-rsa/pki/private# ls
+ca.key	client1.key  server.key
+root@mypi:/etc/openvpn/easy-rsa/pki/private# htop 
+root@mypi:/etc/openvpn/easy-rsa/pki/private# 
+root@mypi:/etc/openvpn/easy-rsa/pki/private# 
+root@mypi:/etc/openvpn/easy-rsa/pki/private# 
+root@mypi:/etc/openvpn/easy-rsa/pki/private# 
+root@mypi:/etc/openvpn/easy-rsa/pki/private# 
+root@mypi:/etc/openvpn/easy-rsa/pki/private# cd
+root@mypi:~# cd .
+./             ../            .bash_history  .bashrc        .config/       .local/        .profile
+root@mypi:~# ls
+root@mypi:~# exir
+bash: exir: command not found
+root@mypi:~# exit
+exit
+rapidbiz@mypi:/usr/share $ cd
+rapidbiz@mypi:~ $ cd 
+.cache/     .config/    my_home_pi/ .npm/       .nvm/       .pm2/       
+rapidbiz@mypi:~ $ cd 
+.cache/     .config/    my_home_pi/ .npm/       .nvm/       .pm2/       
+rapidbiz@mypi:~ $ cd .config/
+rapidbiz@mypi:~/.config $ ls
+htop
+rapidbiz@mypi:~/.config $ cd htop/
+rapidbiz@mypi:~/.config/htop $ ls
+htoprc
+rapidbiz@mypi:~/.config/htop $ vi htoprc 
+rapidbiz@mypi:~/.config/htop $ sudo service openvpn stop
+rapidbiz@mypi:~/.config/htop $ sudo service openvpn status 
+● openvpn.service - OpenVPN service
+     Loaded: loaded (/lib/systemd/system/openvpn.service; enabled; vendor preset: enabled)
+     Active: inactive (dead) since Sat 2023-06-17 12:40:55 BST; 5s ago
+   Main PID: 3158 (code=exited, status=0/SUCCESS)
+        CPU: 0
+
+Jun 17 12:10:42 mypi systemd[1]: Starting OpenVPN service...
+Jun 17 12:10:42 mypi systemd[1]: Finished OpenVPN service.
+Jun 17 12:40:55 mypi systemd[1]: openvpn.service: Succeeded.
+Jun 17 12:40:55 mypi systemd[1]: Stopped OpenVPN service.
+rapidbiz@mypi:~/.config/htop $ sudo service openvpn status 
+● openvpn.service - OpenVPN service
+     Loaded: loaded (/lib/systemd/system/openvpn.service; enabled; vendor preset: enabled)
+     Active: inactive (dead) since Sat 2023-06-17 12:40:55 BST; 17s ago
+   Main PID: 3158 (code=exited, status=0/SUCCESS)
+        CPU: 0
+
+Jun 17 12:10:42 mypi systemd[1]: Starting OpenVPN service...
+Jun 17 12:10:42 mypi systemd[1]: Finished OpenVPN service.
+Jun 17 12:40:55 mypi systemd[1]: openvpn.service: Succeeded.
+Jun 17 12:40:55 mypi systemd[1]: Stopped OpenVPN service.
+rapidbiz@mypi:~/.config/htop $ iptables
+iptables v1.8.7 (nf_tables): no command specified
+Try `iptables -h' or 'iptables --help' for more information.
+rapidbiz@mypi:~/.config/htop $ iptables -h
+iptables v1.8.7
+
+Usage: iptables -[ACD] chain rule-specification [options]
+	iptables -I chain [rulenum] rule-specification [options]
+	iptables -R chain rulenum rule-specification [options]
+	iptables -D chain rulenum [options]
+	iptables -[LS] [chain [rulenum]] [options]
+	iptables -[FZ] [chain] [options]
+	iptables -[NX] chain
+	iptables -E old-chain-name new-chain-name
+	iptables -P chain target [options]
+	iptables -h (print this help information)
+
+Commands:
+Either long or short options are allowed.
+  --append  -A chain		Append to chain
+  --check   -C chain		Check for the existence of a rule
+  --delete  -D chain		Delete matching rule from chain
+  --delete  -D chain rulenum
+				Delete rule rulenum (1 = first) from chain
+  --insert  -I chain [rulenum]
+				Insert in chain as rulenum (default 1=first)
+  --replace -R chain rulenum
+				Replace rule rulenum (1 = first) in chain
+  --list    -L [chain [rulenum]]
+				List the rules in a chain or all chains
+  --list-rules -S [chain [rulenum]]
+				Print the rules in a chain or all chains
+  --flush   -F [chain]		Delete all rules in  chain or all chains
+  --zero    -Z [chain [rulenum]]
+				Zero counters in chain or all chains
+  --new     -N chain		Create a new user-defined chain
+  --delete-chain
+	     -X [chain]		Delete a user-defined chain
+  --policy  -P chain target
+				Change policy on chain to target
+  --rename-chain
+	     -E old-chain new-chain
+				Change chain name, (moving any references)
+Options:
+    --ipv4	-4		Nothing (line is ignored by ip6tables-restore)
+    --ipv6	-6		Error (line is ignored by iptables-restore)
+[!] --proto	-p proto	protocol: by number or name, eg. `tcp'
+[!] --source	-s address[/mask][...]
+				source specification
+[!] --destination -d address[/mask][...]
+				destination specification
+[!] --in-interface -i input name[+]
+				network interface name ([+] for wildcard)
+ --jump	-j target
+				target for rule (may load target extension)
+  --goto      -g chain
+			       jump to chain with no return
+  --match	-m match
+				extended match (may load extension)
+  --numeric	-n		numeric output of addresses and ports
+[!] --out-interface -o output name[+]
+				network interface name ([+] for wildcard)
+  --table	-t table	table to manipulate (default: `filter')
+  --verbose	-v		verbose mode
+  --wait	-w [seconds]	maximum wait to acquire xtables lock before give up
+  --wait-interval -W [usecs]	wait time to try to acquire xtables lock
+				default is 1 second
+  --line-numbers		print line numbers when listing
+  --exact	-x		expand numbers (display exact values)
+[!] --fragment	-f		match second or further fragments only
+  --modprobe=<command>		try to insert modules using this command
+  --set-counters PKTS BYTES	set the counter during insert/append
+[!] --version	-V		print package version.
+iptables v1.8.7 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)
+
+rapidbiz@mypi:~/.config/htop $ 
+rapidbiz@mypi:~/.config/htop $ sudo service --all
+--all: unrecognized service
+rapidbiz@mypi:~/.config/htop $ sudo service --help
+Usage: service < option > | --status-all | [ service_name [ command | --full-restart ] ]
+rapidbiz@mypi:~/.config/htop $ sudo service --status-all
+ [ - ]  alsa-utils
+ [ + ]  avahi-daemon
+ [ + ]  bluetooth
+ [ - ]  console-setup.sh
+ [ + ]  cron
+ [ + ]  dbus
+ [ + ]  dphys-swapfile
+ [ + ]  fake-hwclock
+ [ - ]  hwclock.sh
+ [ - ]  keyboard-setup.sh
+ [ + ]  kmod
+ [ + ]  networking
+ [ - ]  nfs-common
+ [ - ]  openvpn
+ [ - ]  paxctld
+ [ - ]  pcscd
+ [ + ]  procps
+ [ + ]  raspi-config
+ [ + ]  rng-tools-debian
+ [ - ]  rpcbind
+ [ - ]  rsync
+ [ + ]  rsyslog
+ [ + ]  ssh
+ [ - ]  sudo
+ [ + ]  triggerhappy
+ [ + ]  udev
+rapidbiz@mypi:~/.config/htop $ sudo service ssh status
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2023-05-14 18:31:11 BST; 1 months 3 days ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 503 (sshd)
+      Tasks: 1 (limit: 1595)
+        CPU: 474ms
+     CGroup: /system.slice/ssh.service
+             └─503 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+
+May 14 18:31:11 mypi systemd[1]: Starting OpenBSD Secure Shell server...
+May 14 18:31:11 mypi sshd[503]: Server listening on 0.0.0.0 port 22.
+May 14 18:31:11 mypi sshd[503]: Server listening on :: port 22.
+May 14 18:31:11 mypi systemd[1]: Started OpenBSD Secure Shell server.
+Jun 17 11:58:22 mypi sshd[817]: Accepted password for rapidbiz from fe80::18d6:c68b:4ac2:4d90%wlan0 port 53295 ssh2
+Jun 17 11:58:22 mypi sshd[817]: pam_unix(sshd:session): session opened for user rapidbiz(uid=1000) by (uid=0)
+rapidbiz@mypi:~/.config/htop $ cd 
+rapidbiz@mypi:~ $ cd my_home_pi/
+rapidbiz@mypi:~/my_home_pi $ ls
+app  config  node_modules  package-lock.json  package.json  pm2-prod.json  server.js  test.js
+rapidbiz@mypi:~/my_home_pi $ git pull
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+Username for 'https://github.com': palagiritejesh@gmail.com
+Password for 'https://palagiritejesh@gmail.com@github.com': 
+Already up to date.
+rapidbiz@mypi:~/my_home_pi $ node server.js 
+
+/home/rapidbiz/my_home_pi/node_modules/dotenv-safe/index.js:31
+            throw new MissingEnvVarsError(allowEmptyValues, options.path || '.env', example, missing, dotenvResult.error);
+            ^
+MissingEnvVarsError: The following variables were defined in .env.example but are not present in the environment:
+  MONGO_USER, MONGO_PASSWORD, MONGO_DB_NAME, MONGO_HOST
+Make sure to add them to .env or directly to the environment.
+
+If you expect any of these variables to be empty, you can use the allowEmptyValues option:
+require('dotenv-safe').config({
+  allowEmptyValues: true
+});
+
+Also, the following error was thrown when trying to read variables from  .env:
+ENOENT: no such file or directory, open '/home/rapidbiz/my_home_pi/.env'
+    at Object.config (/home/rapidbiz/my_home_pi/node_modules/dotenv-safe/index.js:31:19)
+    at Object.<anonymous> (/home/rapidbiz/my_home_pi/server.js:1:24)
+    at Module._compile (node:internal/modules/cjs/loader:1196:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1250:10)
+    at Module.load (node:internal/modules/cjs/loader:1074:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:909:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:22:47 {
+  missing: [ 'MONGO_USER', 'MONGO_PASSWORD', 'MONGO_DB_NAME', 'MONGO_HOST' ],
+  sample: '.env.example',
+  example: '.env.example'
+}
+rapidbiz@mypi:~/my_home_pi $ vi app/
+constants    controllers/ models/      router.js    services/    utils/       
+rapidbiz@mypi:~/my_home_pi $ vi app/
+constants    controllers/ models/      router.js    services/    utils/       
+rapidbiz@mypi:~/my_home_pi $ cd mod
+-bash: cd: mod: No such file or directory
+rapidbiz@mypi:~/my_home_pi $ cd app/models/
+rapidbiz@mypi:~/my_home_pi/app/models $ ls
+ActiveDevice.js  Device.js  User.js  index.js
+rapidbiz@mypi:~/my_home_pi/app/models $ vi User.js 
+rapidbiz@mypi:~/my_home_pi/app/models $ vi Device.js 
+rapidbiz@mypi:~/my_home_pi/app/models $ vi index.js 
+rapidbiz@mypi:~/my_home_pi/app/models $ vi Device.js 
+rapidbiz@mypi:~/my_home_pi/app/models $ vi Device.js 
+rapidbiz@mypi:~/my_home_pi/app/models $ ls
+ActiveDevice.js  Device.js  User.js  index.js
+rapidbiz@mypi:~/my_home_pi/app/models $ cd ../../
+rapidbiz@mypi:~/my_home_pi $ ls
+app  config  node_modules  package-lock.json  package.json  pm2-prod.json  server.js  test.js
+rapidbiz@mypi:~/my_home_pi $ vi .git
+.git/       .gitignore  
+rapidbiz@mypi:~/my_home_pi $ vi .gitignore 
+rapidbiz@mypi:~/my_home_pi $ vi .gitignore 
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for instrumented libs generated by jscoverage/JSCover
+lib-cov
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# node-waf configuration
+".gitignore" 105 lines, 1628 bytes
